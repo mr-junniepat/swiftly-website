@@ -357,49 +357,7 @@ nav.scrolled {
 .status-badge.good { background: rgba(40,200,64,.1); color: #28c840; border: 1px solid rgba(40,200,64,.2); }
 .status-item { color: var(--muted); }
 
-/* Audit dashboard */
-.dashboard-body { padding: 20px; }
-.dash-scores { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 16px; }
-.score-circle-wrap { display: flex; flex-direction: column; align-items: center; gap: 4px; position: relative; }
-.score-ring { width: 64px; height: 64px; }
-.score-num {
-  position: absolute; top: 18px; left: 50%; transform: translateX(-50%);
-  font-family: var(--font-display); font-weight: 800; font-size: 16px; color: var(--white);
-}
-.score-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
-.dash-stats {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 16px;
-}
-.dash-stat {
-  background: var(--bg3); border-radius: 8px; padding: 10px 12px; text-align: center;
-}
-.dash-stat-val { display: block; font-family: var(--font-display); font-weight: 800; font-size: 18px; color: var(--white); letter-spacing: -.02em; }
-.dash-stat-label { font-size: 10px; color: var(--muted); }
-.dash-checks { display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px; }
-.dash-section-title { font-size: 10px; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin-bottom: 4px; font-weight: 500; }
-.dash-check {
-  display: flex; align-items: center; gap: 8px;
-  padding: 6px 10px; border-radius: 6px; font-size: 12px; color: var(--white);
-}
-.dash-check:hover { background: rgba(255,255,255,.03); }
-.dc-icon { color: #28c840; font-size: 13px; flex-shrink: 0; }
-.dash-footer {
-  display: flex; justify-content: space-between; align-items: center;
-  padding-top: 10px; border-top: 1px solid var(--border);
-}
-.dash-badge {
-  font-size: 10px; font-weight: 600; color: #28c840;
-  background: rgba(40,200,64,.1); border: 1px solid rgba(40,200,64,.2);
-  padding: 3px 10px; border-radius: 100px;
-}
-.dash-footer-text { font-size: 11px; color: var(--muted); }
-
-@media (max-width: 600px) {
-  .dash-scores { grid-template-columns: repeat(2, 1fr); }
-  .dash-stats { grid-template-columns: repeat(2, 1fr); }
-}
-
-/* App mockup (legacy) */
+/* App mockup */
 .app-mockup-wrap { position: relative; }
 .app-mockup {
   background: rgba(255,255,255,.04);

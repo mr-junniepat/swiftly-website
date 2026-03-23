@@ -26,61 +26,24 @@ const auditLines = [
 function TerminalLine({ line }: { line: (typeof auditLines)[number] }) {
   if (line.type === "spacer") return <div className="terminal-spacer" />;
   if (line.type === "command")
-    return (
-      <div className="terminal-line dim">
-        <span className="terminal-prompt">$</span> {line.text.slice(2)}
-      </div>
-    );
+    return (<div className="terminal-line dim"><span className="terminal-prompt">$</span> {line.text.slice(2)}</div>);
   if (line.type === "muted")
-    return (
-      <div className="terminal-line">
-        <span className="terminal-muted">{line.text}</span>
-      </div>
-    );
+    return (<div className="terminal-line"><span className="terminal-muted">{line.text}</span></div>);
   if (line.type === "label-bad")
-    return (
-      <div className="terminal-line">
-        <span className="terminal-label-bad">{line.text}</span>
-      </div>
-    );
+    return (<div className="terminal-line"><span className="terminal-label-bad">{line.text}</span></div>);
   if (line.type === "label-good")
-    return (
-      <div className="terminal-line">
-        <span className="terminal-label-good">{line.text}</span>
-      </div>
-    );
+    return (<div className="terminal-line"><span className="terminal-label-good">{line.text}</span></div>);
   if (line.type === "red")
-    return (
-      <div className="terminal-line dim">
-        <span className="terminal-red">{line.text[0]}</span>
-        {line.text.slice(1)}
-      </div>
-    );
+    return (<div className="terminal-line dim"><span className="terminal-red">{line.text[0]}</span>{line.text.slice(1)}</div>);
   if (line.type === "yellow")
-    return (
-      <div className="terminal-line dim">
-        <span className="terminal-yellow">{line.text[0]}</span>
-        {line.text.slice(1)}
-      </div>
-    );
+    return (<div className="terminal-line dim"><span className="terminal-yellow">{line.text[0]}</span>{line.text.slice(1)}</div>);
   if (line.type === "green")
-    return (
-      <div className="terminal-line">
-        <span className="terminal-green">{line.text[0]}</span>
-        {line.text.slice(1)}
-      </div>
-    );
+    return (<div className="terminal-line"><span className="terminal-green">{line.text[0]}</span>{line.text.slice(1)}</div>);
   if (line.type === "result")
-    return (
-      <div className="terminal-line">
-        <span className="terminal-green-bold">{line.text}</span>{" "}
-        <span className="terminal-muted">6 weeks, $14,900</span>
-      </div>
-    );
+    return (<div className="terminal-line"><span className="terminal-green-bold">{line.text}</span> <span className="terminal-muted">6 weeks, $14,900</span></div>);
   return null;
 }
 
-// phase: "terminal" → "editor" → "dashboard" (cycles editor ↔ dashboard)
 type Phase = "terminal" | "editor" | "dashboard";
 
 export default function HeroMockup() {
@@ -99,7 +62,6 @@ export default function HeroMockup() {
       setVisibleLines(i);
       if (i >= auditLines.length) {
         clearInterval(interval);
-        // After terminal finishes, transition to editor
         setTimeout(() => {
           setTransitioning(true);
           setTimeout(() => {
@@ -113,7 +75,6 @@ export default function HeroMockup() {
     return () => clearInterval(interval);
   }, []);
 
-  // Cycle between editor and dashboard every 5 seconds
   useEffect(() => {
     if (phase === "terminal") return;
 
@@ -130,7 +91,6 @@ export default function HeroMockup() {
 
   return (
     <div className="hero-mockup-container">
-      {/* Phase indicator dots */}
       {phase !== "terminal" && (
         <div className="phase-dots">
           <span className={`phase-dot ${phase === "editor" ? "active" : ""}`} />
@@ -139,14 +99,13 @@ export default function HeroMockup() {
       )}
 
       <div className={`mockup-phase ${transitioning ? "fade-out" : "fade-in"}`}>
+
         {/* TERMINAL */}
         {phase === "terminal" && (
           <div className="terminal">
             <div className="terminal-bar">
               <div className="terminal-dots">
-                <span className="dot dot-red"></span>
-                <span className="dot dot-yellow"></span>
-                <span className="dot dot-green"></span>
+                <span className="dot dot-red" /><span className="dot dot-yellow" /><span className="dot dot-green" />
               </div>
               <span className="terminal-title">swiftly audit</span>
             </div>
@@ -154,9 +113,7 @@ export default function HeroMockup() {
               {auditLines.slice(0, visibleLines).map((line, i) => (
                 <TerminalLine key={i} line={line} />
               ))}
-              <div className="terminal-cursor">
-                <span className="cursor-blink">_</span>
-              </div>
+              <div className="terminal-cursor"><span className="cursor-blink">_</span></div>
             </div>
           </div>
         )}
@@ -166,9 +123,7 @@ export default function HeroMockup() {
           <div className="terminal">
             <div className="terminal-bar">
               <div className="terminal-dots">
-                <span className="dot dot-red"></span>
-                <span className="dot dot-yellow"></span>
-                <span className="dot dot-green"></span>
+                <span className="dot dot-red" /><span className="dot dot-yellow" /><span className="dot dot-green" />
               </div>
               <span className="terminal-title">app/api/auth.ts</span>
               <div className="editor-tabs">
@@ -202,55 +157,43 @@ export default function HeroMockup() {
           </div>
         )}
 
-        {/* AUDIT DASHBOARD */}
+        {/* APP DASHBOARD */}
         {phase === "dashboard" && (
-          <div className="terminal">
-            <div className="terminal-bar">
-              <div className="terminal-dots">
-                <span className="dot dot-red"></span>
-                <span className="dot dot-yellow"></span>
-                <span className="dot dot-green"></span>
-              </div>
-              <span className="terminal-title">Audit Report</span>
-            </div>
-            <div className="dashboard-body">
-              <div className="dash-scores">
-                {[
-                  { label: "Security", score: 96 },
-                  { label: "Tests", score: 94 },
-                  { label: "Performance", score: 91 },
-                  { label: "Code Quality", score: 88 },
-                ].map((s) => (
-                  <div className="score-circle-wrap" key={s.label}>
-                    <svg className="score-ring" viewBox="0 0 80 80">
-                      <circle cx="40" cy="40" r="34" fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth="5" />
-                      <circle cx="40" cy="40" r="34" fill="none" stroke="#28c840" strokeWidth="5" strokeDasharray={`${(s.score / 100) * 213.6} 213.6`} strokeLinecap="round" transform="rotate(-90 40 40)" />
-                    </svg>
-                    <span className="score-num">{s.score}</span>
-                    <span className="score-label">{s.label}</span>
-                  </div>
-                ))}
+          <div className="app-mockup">
+            <div className="app-mockup-inner">
+              <div className="app-header">
+                <div>
+                  <h3>Today&apos;s Dashboard</h3>
+                  <p>8 jobs completed</p>
+                </div>
+                <span className="badge-green">+23% this week</span>
               </div>
 
-              <div className="dash-stats">
-                <div className="dash-stat"><span className="dash-stat-val">247</span><span className="dash-stat-label">Files audited</span></div>
-                <div className="dash-stat"><span className="dash-stat-val">18</span><span className="dash-stat-label">Issues fixed</span></div>
-                <div className="dash-stat"><span className="dash-stat-val">0</span><span className="dash-stat-label">Critical bugs</span></div>
-                <div className="dash-stat"><span className="dash-stat-val">6 wks</span><span className="dash-stat-label">Time to ship</span></div>
+              <div className="job-row done">
+                <div>
+                  <h4>Auth &amp; RBAC Setup</h4>
+                  <p>User roles, JWT sessions, OAuth</p>
+                </div>
+                <span className="job-status done">Done</span>
+              </div>
+              <div className="job-row active">
+                <div>
+                  <h4>API Integration</h4>
+                  <p>Stripe, webhooks, error handling</p>
+                </div>
+                <span className="job-status active">In Progress</span>
+              </div>
+              <div className="job-row enroute">
+                <div>
+                  <h4>CI/CD &amp; Deploy</h4>
+                  <p>GitHub Actions, Vercel, monitoring</p>
+                </div>
+                <span className="job-status enroute">Queued</span>
               </div>
 
-              <div className="dash-checks">
-                <div className="dash-check pass"><span className="dc-icon">✓</span> Authentication &amp; RBAC</div>
-                <div className="dash-check pass"><span className="dc-icon">✓</span> 94% test coverage</div>
-                <div className="dash-check pass"><span className="dc-icon">✓</span> Error handling &amp; logging</div>
-                <div className="dash-check pass"><span className="dc-icon">✓</span> Secrets in env vault</div>
-                <div className="dash-check pass"><span className="dc-icon">✓</span> CI/CD with auto-deploy</div>
-                <div className="dash-check pass"><span className="dc-icon">✓</span> Rate limiting &amp; validation</div>
-              </div>
-
-              <div className="dash-footer">
-                <span className="dash-badge">✓ Production-ready</span>
-                <span className="dash-footer-text">Last audit: just now</span>
+              <div className="app-footer">
+                <span>Sprint Progress</span>
+                <strong style={{ color: "var(--green)" }}>86%</strong>
               </div>
             </div>
           </div>
