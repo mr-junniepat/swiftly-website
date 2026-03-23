@@ -456,7 +456,7 @@ export default function Home() {
       </section>
 
       {/* ═══ PRICING ═══ */}
-      <section id="pricing" style={{ padding: "7rem 0" }}>
+      <section id="pricing" className="py-28">
         <div className="container">
           <div className="section-header reveal">
             <div className="tag">Pricing</div>
@@ -464,54 +464,71 @@ export default function Home() {
             <p>Every plan includes the 6-week guarantee.</p>
           </div>
 
-          <div className="pricing-cards">
-            <div className="pricing-card reveal">
-              <div className="pricing-tier">Starter</div>
-              <div className="pricing-price"><sup>$</sup>8,500</div>
-              <div className="pricing-note">One platform &middot; up to 8 screens</div>
-              <div className="pricing-divider"></div>
-              <ul className="pricing-features">
-                <li className="yes"><span className="chk">✓</span> Single platform (mobile, web, or desktop)</li>
-                <li className="yes"><span className="chk">✓</span> UI/UX design included</li>
-                <li className="yes"><span className="chk">✓</span> Vibe code audit &amp; fix included</li>
-                <li className="yes"><span className="chk">✓</span> 6-week delivery guarantee</li>
-                <li className="yes"><span className="chk">✓</span> 30-day post-launch support</li>
-                <li><span style={{ color: "var(--muted)" }}>–</span> Backend / admin panel</li>
+          {/* Competitor context */}
+          <div className="reveal mb-10 rounded-2xl border border-white/[0.07] bg-[#101010] px-6 py-5 text-sm text-[rgba(245,242,236,0.42)]">
+            <span className="font-medium text-[#F5F2EC]">For context:</span> agencies typically charge $50k–$150k+ for the same work and take 6–12 months. We do it for a fraction of the cost because AI handles the heavy lifting. You pay for the result, not the hours.
+          </div>
+
+          <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
+            {/* Starter */}
+            <div className="reveal relative rounded-2xl border border-white/[0.07] bg-[#070707] p-8 transition-colors hover:border-white/[0.13]">
+              <div className="mb-1 text-xs font-medium uppercase tracking-[0.12em] text-[rgba(245,242,236,0.42)]">Starter</div>
+              <div className="mb-1 font-[var(--font-display)] text-[38px] font-extrabold tracking-tight text-[#F5F2EC]"><sup className="text-xl align-super">$</sup>8,500</div>
+              <div className="mb-6 text-sm text-[rgba(245,242,236,0.42)]">One platform &middot; fixed price</div>
+              <div className="mb-5 h-px bg-white/[0.07]"></div>
+              <ul className="mb-7 flex flex-col gap-2.5">
+                <li className="flex items-center gap-2 text-sm text-[#F5F2EC]"><span className="text-[#FF4D00]">✓</span> Pick one: mobile, web, or desktop</li>
+                <li className="flex items-center gap-2 text-sm text-[#F5F2EC]"><span className="text-[#FF4D00]">✓</span> UI/UX design included</li>
+                <li className="flex items-center gap-2 text-sm text-[#F5F2EC]"><span className="text-[#FF4D00]">✓</span> Vibe code audit &amp; fix</li>
+                <li className="flex items-center gap-2 text-sm text-[#F5F2EC]"><span className="text-[#FF4D00]">✓</span> 6-week delivery guarantee</li>
+                <li className="flex items-center gap-2 text-sm text-[#F5F2EC]"><span className="text-[#FF4D00]">✓</span> 30 days post-launch support</li>
+                <li className="flex items-center gap-2 text-sm text-[rgba(245,242,236,0.42)]"><span>–</span> Backend / admin panel</li>
               </ul>
-              <button className="pricing-btn outline" onClick={openModal}>Get Started</button>
+              <div className="mb-4 rounded-lg bg-white/[0.04] px-3 py-2 text-xs text-[rgba(245,242,236,0.42)]">
+                Agencies charge <span className="font-medium text-[#F5F2EC]">$20k–$50k</span> for this
+              </div>
+              <button className="w-full rounded-lg border border-white/[0.13] bg-transparent px-4 py-3.5 text-sm font-medium text-[#F5F2EC] transition-colors hover:border-white/25 hover:bg-white/[0.04] cursor-pointer" onClick={openModal}>Get Started</button>
             </div>
 
-            <div className="pricing-card featured reveal">
-              <div className="featured-badge">Most Popular</div>
-              <div className="pricing-tier">Growth</div>
-              <div className="pricing-price"><sup>$</sup>14,900</div>
-              <div className="pricing-note">Multi-platform &middot; up to 15 screens</div>
-              <div className="pricing-divider"></div>
-              <ul className="pricing-features">
-                <li className="yes"><span className="chk">✓</span> Up to 2 platforms (mobile + web, etc.)</li>
-                <li className="yes"><span className="chk">✓</span> UI/UX design included</li>
-                <li className="yes"><span className="chk">✓</span> Full vibe code → production rewrite</li>
-                <li className="yes"><span className="chk">✓</span> 6-week delivery guarantee</li>
-                <li className="yes"><span className="chk">✓</span> 60-day post-launch support</li>
-                <li className="yes"><span className="chk">✓</span> Backend + admin panel</li>
+            {/* Growth */}
+            <div className="reveal relative rounded-2xl border border-[rgba(255,77,0,0.4)] bg-[#101010] p-8">
+              <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-[#FF4D00] px-4 py-1 text-[11px] font-medium uppercase tracking-[0.1em] text-white">Most Popular</div>
+              <div className="mb-1 text-xs font-medium uppercase tracking-[0.12em] text-[rgba(245,242,236,0.42)]">Growth</div>
+              <div className="mb-1 font-[var(--font-display)] text-[38px] font-extrabold tracking-tight text-[#F5F2EC]"><sup className="text-xl align-super">$</sup>14,900</div>
+              <div className="mb-6 text-sm text-[rgba(245,242,236,0.42)]">Multi-platform &middot; fixed price</div>
+              <div className="mb-5 h-px bg-white/[0.07]"></div>
+              <ul className="mb-7 flex flex-col gap-2.5">
+                <li className="flex items-center gap-2 text-sm text-[#F5F2EC]"><span className="text-[#FF4D00]">✓</span> Up to 2 platforms (mobile + web, etc.)</li>
+                <li className="flex items-center gap-2 text-sm text-[#F5F2EC]"><span className="text-[#FF4D00]">✓</span> UI/UX design included</li>
+                <li className="flex items-center gap-2 text-sm text-[#F5F2EC]"><span className="text-[#FF4D00]">✓</span> Full vibe code → production rewrite</li>
+                <li className="flex items-center gap-2 text-sm text-[#F5F2EC]"><span className="text-[#FF4D00]">✓</span> 6-week delivery guarantee</li>
+                <li className="flex items-center gap-2 text-sm text-[#F5F2EC]"><span className="text-[#FF4D00]">✓</span> 60 days post-launch support</li>
+                <li className="flex items-center gap-2 text-sm text-[#F5F2EC]"><span className="text-[#FF4D00]">✓</span> Backend + admin panel</li>
               </ul>
-              <button className="pricing-btn primary" onClick={openModal}>Book Discovery Call</button>
+              <div className="mb-4 rounded-lg bg-[rgba(255,77,0,0.08)] border border-[rgba(255,77,0,0.2)] px-3 py-2 text-xs text-[rgba(245,242,236,0.42)]">
+                Agencies charge <span className="font-medium text-[#FF4D00]">$50k–$120k</span> for this
+              </div>
+              <button className="w-full rounded-lg bg-[#FF4D00] px-4 py-3.5 text-sm font-medium text-white transition-colors hover:bg-[#CC3D00] cursor-pointer" onClick={openModal}>Book Discovery Call</button>
             </div>
 
-            <div className="pricing-card reveal">
-              <div className="pricing-tier">Scale</div>
-              <div className="pricing-price">Custom</div>
-              <div className="pricing-note">Complex builds &middot; integrations</div>
-              <div className="pricing-divider"></div>
-              <ul className="pricing-features">
-                <li className="yes"><span className="chk">✓</span> All platforms</li>
-                <li className="yes"><span className="chk">✓</span> Full custom UI/UX</li>
-                <li className="yes"><span className="chk">✓</span> Complex backend / API</li>
-                <li className="yes"><span className="chk">✓</span> Third-party integrations</li>
-                <li className="yes"><span className="chk">✓</span> 90-day post-launch support</li>
-                <li className="yes"><span className="chk">✓</span> Ongoing maintenance plan</li>
+            {/* Scale */}
+            <div className="reveal relative rounded-2xl border border-white/[0.07] bg-[#070707] p-8 transition-colors hover:border-white/[0.13]">
+              <div className="mb-1 text-xs font-medium uppercase tracking-[0.12em] text-[rgba(245,242,236,0.42)]">Scale</div>
+              <div className="mb-1 font-[var(--font-display)] text-[38px] font-extrabold tracking-tight text-[#F5F2EC]">Custom</div>
+              <div className="mb-6 text-sm text-[rgba(245,242,236,0.42)]">Complex builds &middot; scoped to your needs</div>
+              <div className="mb-5 h-px bg-white/[0.07]"></div>
+              <ul className="mb-7 flex flex-col gap-2.5">
+                <li className="flex items-center gap-2 text-sm text-[#F5F2EC]"><span className="text-[#FF4D00]">✓</span> All platforms</li>
+                <li className="flex items-center gap-2 text-sm text-[#F5F2EC]"><span className="text-[#FF4D00]">✓</span> Full custom UI/UX</li>
+                <li className="flex items-center gap-2 text-sm text-[#F5F2EC]"><span className="text-[#FF4D00]">✓</span> Complex backend / API work</li>
+                <li className="flex items-center gap-2 text-sm text-[#F5F2EC]"><span className="text-[#FF4D00]">✓</span> Third-party integrations</li>
+                <li className="flex items-center gap-2 text-sm text-[#F5F2EC]"><span className="text-[#FF4D00]">✓</span> 90 days post-launch support</li>
+                <li className="flex items-center gap-2 text-sm text-[#F5F2EC]"><span className="text-[#FF4D00]">✓</span> Ongoing maintenance plan</li>
               </ul>
-              <button className="pricing-btn outline" onClick={openModal}>Contact Sales</button>
+              <div className="mb-4 rounded-lg bg-white/[0.04] px-3 py-2 text-xs text-[rgba(245,242,236,0.42)]">
+                Agencies charge <span className="font-medium text-[#F5F2EC]">$75k–$300k+</span> for this
+              </div>
+              <button className="w-full rounded-lg border border-white/[0.13] bg-transparent px-4 py-3.5 text-sm font-medium text-[#F5F2EC] transition-colors hover:border-white/25 hover:bg-white/[0.04] cursor-pointer" onClick={openModal}>Contact Sales</button>
             </div>
           </div>
         </div>
