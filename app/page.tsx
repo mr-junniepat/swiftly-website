@@ -6,10 +6,8 @@ import Script from "next/script";
 import {
   Smartphone,
   Hourglass,
-  DollarSign,
   Puzzle,
   Network,
-  Rocket,
   Apple,
   Monitor,
   Globe,

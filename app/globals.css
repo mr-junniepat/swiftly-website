@@ -242,7 +242,6 @@ nav.scrolled {
 @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 
 /* Terminal mockup */
-.terminal-wrap { position: relative; }
 .terminal {
   background: #0a0a0a;
   border: 1px solid var(--border2);
@@ -358,7 +357,6 @@ nav.scrolled {
 .status-item { color: var(--muted); }
 
 /* App mockup */
-.app-mockup-wrap { position: relative; }
 .app-mockup {
   background: rgba(255,255,255,.04);
   border: 1px solid var(--border2);
@@ -389,27 +387,6 @@ nav.scrolled {
 .app-footer span { font-size: 13px; color: var(--muted); }
 .app-footer strong { font-family: var(--font-display); font-size: 18px; color: var(--white); }
 
-/* Floating stat cards */
-.float-card {
-  position: absolute;
-  background: var(--bg2);
-  border: 1px solid var(--border2);
-  border-radius: var(--radius);
-  padding: 12px 16px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  animation: floatY 4s ease-in-out infinite;
-}
-.float-card:nth-child(2) { animation-delay: -2s; }
-.float-card-icon { width: 36px; height: 36px; border-radius: 8px; background: var(--orange-soft); border: 1px solid var(--orange-mid); display: flex; align-items: center; justify-content: center; }
-.float-card-icon svg { width: 18px; height: 18px; stroke: var(--orange); }
-.float-card p    { font-size: 11px; color: var(--muted); margin-bottom: 2px; }
-.float-card strong { font-family: var(--font-display); font-size: 18px; font-weight: 800; color: var(--white); letter-spacing: -.02em; }
-.fc-left  { left: -36px; top: 22%; }
-.fc-right { right: -28px; bottom: 22%; }
-
-@keyframes floatY { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
 /* Scroll indicator */
 .scroll-indicator { position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; opacity: .3; }
@@ -629,7 +606,6 @@ footer { padding: 3rem 0; border-top: 1px solid var(--border); }
 @media (max-width: 900px) {
   .hero-layout   { grid-template-columns: 1fr; gap: 2.5rem; }
   .hero-mockup-container { min-height: auto; max-width: 500px; margin: 0 auto; }
-  .fc-left, .fc-right { display: none; }
   .roi-layout    { grid-template-columns: 1fr; }
   .process-steps { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
   .process-steps::before { display: none; }
