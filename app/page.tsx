@@ -115,46 +115,48 @@ export default function Home() {
             <div>
               <div className="hero-eyebrow">
                 <div className="hero-eyebrow-line"></div>
-                <span>Mobile &middot; Web &middot; Desktop</span>
+                <span>We fix vibe-coded apps</span>
               </div>
 
               <h1>
-                Vibe coded it?
+                Your app.
                 <br />
-                We make it
+                Live in
                 <br />
-                <em>production-ready.</em>
+                <em>6 weeks.</em>
+                <br />
+                Guaranteed.
               </h1>
 
               <p className="hero-sub">
-                We fix AI-generated prototypes and build production-grade apps
-                across every platform — mobile, web, and desktop.
-                From first commit to launch in 6 weeks.
+                Built something with Cursor, Bolt, or v0 that&apos;s not quite ready
+                for real users? We take it the rest of the way. Mobile, web, desktop
+                &mdash; we ship production code, not prototypes.
               </p>
 
               <div className="hero-actions">
                 <button className="btn-primary" onClick={openModal}>
-                  Book Free Strategy Call <ArrowRight size={16} />
+                  Book a Free Call <ArrowRight size={16} />
                 </button>
                 <a href="#how-it-works" className="btn-ghost">
-                  See How It Works
+                  How It Works
                 </a>
               </div>
 
               <div className="hero-stats reveal">
                 <div className="hero-stat">
                   <strong>6 Wks</strong>
-                  <span>To production</span>
+                  <span>Average delivery</span>
                 </div>
                 <div className="h-divider"></div>
                 <div className="hero-stat">
-                  <strong>All Platforms</strong>
-                  <span>Mobile, Web, Desktop</span>
+                  <strong>Any Platform</strong>
+                  <span>Mobile, web, desktop</span>
                 </div>
                 <div className="h-divider"></div>
                 <div className="hero-stat">
-                  <strong>$8.5k</strong>
-                  <span>Starting price</span>
+                  <strong>From $8.5k</strong>
+                  <span>Fixed price</span>
                 </div>
               </div>
             </div>
@@ -237,43 +239,43 @@ export default function Home() {
           <div className="section-header reveal">
             <div className="tag">The Problem</div>
             <h2>
-              AI builds fast.
+              Your prototype works.
               <br />
-              It doesn&apos;t build <em>right.</em>
+              Your code <em>doesn&apos;t.</em>
             </h2>
             <p>
-              Whether you vibe-coded a prototype or need an app built from scratch,
-              the same problems keep killing projects.
+              You got the idea out fast with AI. But now it needs to handle
+              real users, real payments, and real scale.
             </p>
           </div>
 
           <div className="pain-grid reveal">
             <div className="pain-card">
               <div className="pain-icon"><Puzzle size={22} /></div>
-              <h3>Demo-Ready, Not Production-Ready</h3>
+              <h3>It Works on Your Machine</h3>
               <p>
-                AI-generated code looks right but crumbles under real users.
-                No error handling, no edge cases, no security — just vibes.
+                Looks great in a demo. But there&apos;s no auth, no error handling,
+                and the whole thing falls apart the second a real user touches it.
               </p>
-              <span className="pain-stat">90% of vibe-coded apps fail at scale</span>
+              <span className="pain-stat">Most vibe-coded apps break in production</span>
             </div>
             <div className="pain-card">
               <div className="pain-icon"><Network size={22} /></div>
-              <h3>Spaghetti Architecture</h3>
+              <h3>Nobody Wants to Touch the Code</h3>
               <p>
-                AI doesn&apos;t think about structure. Tangled dependencies,
-                no separation of concerns, code no engineer wants to inherit.
+                AI doesn&apos;t plan ahead. You end up with a mess of tangled files
+                that no developer wants to inherit or build on top of.
               </p>
-              <span className="pain-stat">3x refactor cost if left unchecked</span>
+              <span className="pain-stat">3x more expensive to fix later</span>
             </div>
             <div className="pain-card">
               <div className="pain-icon"><Hourglass size={22} /></div>
-              <h3>Agencies Take Forever</h3>
+              <h3>Hiring an Agency Takes Months</h3>
               <p>
-                Traditional agencies quote 6–12 months and enterprise prices.
-                By the time you launch, the window has closed.
+                Most shops quote 6 months minimum and charge enterprise rates.
+                You don&apos;t have that kind of time or budget.
               </p>
-              <span className="pain-stat">Avg. 8 months wasted</span>
+              <span className="pain-stat">Avg. 8 months before you see anything</span>
             </div>
           </div>
         </div>
@@ -285,29 +287,29 @@ export default function Home() {
           <div className="section-header reveal">
             <div className="tag">What We Do</div>
             <h2>
-              Fix vibe code. Build apps.
+              We turn your prototype
               <br />
-              Ship to <em>production.</em>
+              into a <em>real product.</em>
             </h2>
             <p>
-              Two ways to work with us: bring your AI-generated prototype for production hardening,
-              or start from scratch on any platform.
+              Send us what you&apos;ve got. We&apos;ll clean it up, build it out,
+              and ship it. Or we can start from scratch if you prefer.
             </p>
           </div>
 
           <div className="speed-wrap" style={{ marginBottom: "3rem" }}>
             <div className="speed-card us reveal" style={{ textAlign: "left" }}>
-              <div className="speed-lbl">Fix Your Vibe Code</div>
+              <div className="speed-lbl">We Fix</div>
               <div className="speed-items">
-                <div className="speed-item good"><Code size={16} style={{ flexShrink: 0 }} />Production-grade architecture &amp; clean code</div>
-                <div className="speed-item good"><Database size={16} style={{ flexShrink: 0 }} />Real auth, databases, API integrations</div>
-                <div className="speed-item good"><TestTube size={16} style={{ flexShrink: 0 }} />Error handling, testing &amp; monitoring</div>
-                <div className="speed-item good"><GitBranch size={16} style={{ flexShrink: 0 }} />CI/CD pipeline &amp; deployment</div>
-                <div className="speed-item good"><ShieldCheck size={16} style={{ flexShrink: 0 }} />Security audit &amp; optimization</div>
+                <div className="speed-item good"><Code size={16} style={{ flexShrink: 0 }} />Messy code → clean architecture</div>
+                <div className="speed-item good"><Database size={16} style={{ flexShrink: 0 }} />Add real auth, databases, APIs</div>
+                <div className="speed-item good"><TestTube size={16} style={{ flexShrink: 0 }} />Write tests, handle errors properly</div>
+                <div className="speed-item good"><GitBranch size={16} style={{ flexShrink: 0 }} />Set up CI/CD so deploys just work</div>
+                <div className="speed-item good"><ShieldCheck size={16} style={{ flexShrink: 0 }} />Security review before you go live</div>
               </div>
             </div>
             <div className="speed-card us reveal" style={{ textAlign: "left" }}>
-              <div className="speed-lbl">Platforms We Build &amp; Fix</div>
+              <div className="speed-lbl">We Build For</div>
               <div className="speed-items">
                 <div className="speed-item good"><Smartphone size={16} style={{ flexShrink: 0 }} />Mobile — iOS, Android, React Native, Flutter</div>
                 <div className="speed-item good"><Globe size={16} style={{ flexShrink: 0 }} />Web — Next.js, React, Vue, SaaS</div>
@@ -320,12 +322,12 @@ export default function Home() {
 
           <div className="services-grid">
             {[
-              { icon: <Zap size={28} />, title: "Vibe Code → Production", desc: "You built it with AI. We refactor, harden, and ship it.", items: ["Code audit & architecture cleanup", "Auth, security & error handling", "Testing, CI/CD & monitoring", "Any AI-generated codebase"] },
-              { icon: <Apple size={28} />, title: "iOS Apps", desc: "Native iPhone and iPad apps built for App Store approval.", items: ["Swift / SwiftUI", "App Store submission", "Push notifications & analytics", "Stripe & Apple Pay"] },
-              { icon: <Smartphone size={28} />, title: "Android Apps", desc: "Polished Android apps that pass Google Play review first time.", items: ["Kotlin / Jetpack Compose", "Google Play submission", "Maps & location services", "Firebase integration"] },
-              { icon: <Globe size={28} />, title: "Web Apps", desc: "Fast, responsive web apps and SaaS dashboards.", items: ["Next.js / React / Vue", "SaaS dashboards & admin panels", "API design & integrations", "Vercel / AWS / GCP deploy"] },
-              { icon: <Monitor size={28} />, title: "Desktop Apps", desc: "Cross-platform desktop apps with native performance.", items: ["Electron / Tauri", "Native OS integrations", "Offline-first architecture", "Auto-update & distribution"] },
-              { icon: <Layers size={28} />, title: "Cross-Platform", desc: "One codebase, iOS + Android simultaneously.", items: ["React Native / Flutter", "Both stores, one build", "Shared design system", "Best value for SMBs"] },
+              { icon: <Zap size={28} />, title: "Vibe Code Rescue", desc: "You built it with AI. We make it actually work.", items: ["Full code audit", "Auth, security, error handling", "Tests and CI/CD", "Works with Cursor, Bolt, v0, etc."] },
+              { icon: <Apple size={28} />, title: "iOS Apps", desc: "Native apps that get approved and keep users coming back.", items: ["Swift / SwiftUI", "We handle App Store submission", "Push notifications & analytics", "Stripe & Apple Pay"] },
+              { icon: <Smartphone size={28} />, title: "Android Apps", desc: "Clean Android apps that pass Google Play review the first time.", items: ["Kotlin / Jetpack Compose", "We handle Play Store submission", "Maps & location services", "Firebase backend"] },
+              { icon: <Globe size={28} />, title: "Web Apps", desc: "SaaS tools, dashboards, customer portals. Whatever you need.", items: ["Next.js / React / Vue", "Admin panels & dashboards", "API design & integrations", "Deployed on Vercel, AWS, or GCP"] },
+              { icon: <Monitor size={28} />, title: "Desktop Apps", desc: "Desktop software that runs on Mac, Windows, and Linux.", items: ["Electron / Tauri", "Native OS features", "Works offline", "Auto-updates built in"] },
+              { icon: <Layers size={28} />, title: "Cross-Platform", desc: "One codebase for both iOS and Android. Ship faster, spend less.", items: ["React Native / Flutter", "Both app stores, one build", "Shared design system", "Best option if budget matters"] },
             ].map((s) => (
               <div className="service-card reveal" key={s.title}>
                 <span className="service-icon">{s.icon}</span>
@@ -346,19 +348,19 @@ export default function Home() {
           <div className="section-header reveal">
             <div className="tag">How It Works</div>
             <h2>
-              From messy prototype
+              Four steps.
               <br />
-              to <em>shipped product.</em>
+              <em>Six weeks.</em>
             </h2>
-            <p>Four steps. Six weeks. No surprises.</p>
+            <p>Simple process, no runaround.</p>
           </div>
 
           <div className="process-steps">
             {[
-              { num: "01", title: "Discovery Call", desc: "We audit your codebase (or scope a new build), map requirements, and lock in a fixed timeline.", week: "Day 1" },
-              { num: "02", title: "Architecture & Design", desc: "Clean architecture plan, wireframes, and a roadmap you approve before we write a line of code.", week: "Week 1–2" },
-              { num: "03", title: "Build & Review", desc: "Weekly demos so you see progress and give feedback. No black boxes, no surprises.", week: "Week 2–5" },
-              { num: "04", title: "Launch & Handover", desc: "Deployed, tested, documented. Source code delivered. You own 100% of everything.", week: "Week 6" },
+              { num: "01", title: "We Talk", desc: "30-minute call. We look at what you have (or what you need), figure out the scope, and give you a fixed price on the spot.", week: "Day 1" },
+              { num: "02", title: "Plan & Design", desc: "We map out the architecture, put together wireframes, and get your sign-off before we write any code.", week: "Week 1–2" },
+              { num: "03", title: "Build & Show", desc: "You get a working demo every week. You give feedback, we iterate. No waiting months to see something.", week: "Week 2–5" },
+              { num: "04", title: "Ship It", desc: "Deployed, tested, docs written. You get the source code, the accounts, everything. It's yours.", week: "Week 6" },
             ].map((step) => (
               <div className="step reveal" key={step.num}>
                 <div className="step-num">{step.num}</div>
@@ -377,11 +379,9 @@ export default function Home() {
           <div className="section-header reveal">
             <div className="tag">Why Us</div>
             <h2>
-              We ship in weeks.
-              <br />
-              Not months.
+              Weeks, not months.
             </h2>
-            <p>Speed is built into our process, not bolted on.</p>
+            <p>Here&apos;s how we compare to a typical agency.</p>
           </div>
 
           <div className="speed-wrap">
@@ -400,11 +400,11 @@ export default function Home() {
               <div className="speed-lbl">Swiftly</div>
               <div className="speed-time">6<br /><span style={{ fontSize: "22px" }}>weeks</span></div>
               <div className="speed-items">
-                <div className="speed-item good"><div className="sdot"></div>Code audit to prototype in days</div>
-                <div className="speed-item good"><div className="sdot"></div>Weekly milestones you can see &amp; test</div>
-                <div className="speed-item good"><div className="sdot"></div>Fixed scope, fixed timeline, fixed price</div>
-                <div className="speed-item good"><div className="sdot"></div>Dedicated team on your project only</div>
-                <div className="speed-item good"><div className="sdot"></div>Launch guarantee or you don&apos;t pay</div>
+                <div className="speed-item good"><div className="sdot"></div>You see working code within days</div>
+                <div className="speed-item good"><div className="sdot"></div>Weekly demos, not monthly status emails</div>
+                <div className="speed-item good"><div className="sdot"></div>Fixed price. No scope creep surprises</div>
+                <div className="speed-item good"><div className="sdot"></div>One team, one project, full attention</div>
+                <div className="speed-item good"><div className="sdot"></div>Ships on time or we work free until it does</div>
               </div>
             </div>
           </div>
@@ -415,9 +415,9 @@ export default function Home() {
       <section style={{ padding: "7rem 0", background: "var(--bg2)" }} id="testimonials">
         <div className="container">
           <div className="section-header reveal">
-            <div className="tag">Results</div>
-            <h2>Results, not promises.</h2>
-            <p>The standard we hold ourselves to on every project.</p>
+            <div className="tag">From Our Clients</div>
+            <h2>Don&apos;t take our word for it.</h2>
+            <p>Here&apos;s what people say after working with us.</p>
           </div>
 
           <div className="testi-grid">
@@ -441,10 +441,10 @@ export default function Home() {
           {/* Trust points inline */}
           <div className="trust-grid" style={{ marginTop: "4rem" }}>
             {[
-              { num: "01", title: "Skin in the game", desc: "Your project is our reputation. Every app we ship is our portfolio." },
-              { num: "02", title: "6-week guarantee, in writing", desc: "Your app ships on time — or we work for free until it does. Every contract." },
-              { num: "03", title: "Full transparency", desc: "Weekly demos, live dashboard, direct access to your engineer. No middlemen." },
-              { num: "04", title: "You own everything", desc: "Source code, designs, accounts — all yours. No lock-in, no recurring fees." },
+              { num: "01", title: "We have skin in the game", desc: "We're a small team. Your project is literally our reputation. We can't afford to do bad work." },
+              { num: "02", title: "6-week guarantee, in writing", desc: "It's in the contract. If we miss the deadline, we keep working for free until it ships." },
+              { num: "03", title: "You talk to the person building it", desc: "No project managers, no account reps. You get weekly demos from the engineer doing the work." },
+              { num: "04", title: "You own everything", desc: "Source code, design files, store accounts. All yours from day one. Walk away whenever you want." },
             ].map((card) => (
               <div className="trust-card reveal" key={card.num}>
                 <div className="trust-num">{card.num}</div>
@@ -460,8 +460,8 @@ export default function Home() {
         <div className="container">
           <div className="section-header reveal">
             <div className="tag">Pricing</div>
-            <h2>Fixed prices.<br />No surprises.</h2>
-            <p>All plans include the 6-week launch guarantee.</p>
+            <h2>You know the price<br />before we start.</h2>
+            <p>Every plan includes the 6-week guarantee.</p>
           </div>
 
           <div className="pricing-cards">
@@ -522,8 +522,8 @@ export default function Home() {
         <div className="container">
           <div className="section-header reveal">
             <div className="tag">ROI Calculator</div>
-            <h2>See the revenue<br />impact of your app.</h2>
-            <p>Most clients see payback within the first month.</p>
+            <h2>Run the numbers<br />yourself.</h2>
+            <p>Most of our clients make their money back in the first month.</p>
           </div>
           <ROICalculator onOpenModal={openModal} />
         </div>
@@ -545,9 +545,9 @@ export default function Home() {
         <div className="container">
           <div className="cta-inner">
             <h2>
-              Ready to ship
+              Let&apos;s get your app
               <br />
-              <em>real software?</em>
+              <em>out the door.</em>
             </h2>
             <div className="cta-right">
               <button className="btn-primary" onClick={openModal}>
