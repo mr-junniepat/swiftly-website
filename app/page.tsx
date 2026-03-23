@@ -159,63 +159,66 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Code Before/After Mockup */}
-            <div className="app-mockup-wrap reveal">
-              <div className="app-mockup">
-                <div className="app-mockup-inner">
-                  <div className="app-header">
-                    <div>
-                      <h3>Your Codebase</h3>
-                      <p>Before &amp; after Swiftly</p>
-                    </div>
-                    <span className="badge-green">Production-ready</span>
+            {/* Code Terminal Mockup */}
+            <div className="terminal-wrap reveal">
+              <div className="terminal">
+                <div className="terminal-bar">
+                  <div className="terminal-dots">
+                    <span className="dot dot-red"></span>
+                    <span className="dot dot-yellow"></span>
+                    <span className="dot dot-green"></span>
                   </div>
-
-                  <div className="job-row enroute">
-                    <div>
-                      <h4>Vibe-coded prototype</h4>
-                      <p>No auth, no tests, spaghetti architecture</p>
-                    </div>
-                    <span className="job-status enroute">Before</span>
-                  </div>
-                  <div className="job-row active">
-                    <div>
-                      <h4>Code audit &amp; architecture</h4>
-                      <p>Clean structure, proper separation</p>
-                    </div>
-                    <span className="job-status active">Week 1–2</span>
-                  </div>
-                  <div className="job-row done">
-                    <div>
-                      <h4>Production-grade app</h4>
-                      <p>Auth, tests, CI/CD, monitoring, deployed</p>
-                    </div>
-                    <span className="job-status done">Shipped</span>
-                  </div>
-
-                  <div className="app-footer">
-                    <span>Status</span>
-                    <strong style={{ color: "var(--green)" }}>Launch-ready</strong>
-                  </div>
+                  <span className="terminal-title">swiftly audit</span>
                 </div>
-              </div>
-
-              <div className="float-card fc-left">
-                <div className="float-card-icon">
-                  <ShieldCheck size={18} />
-                </div>
-                <div>
-                  <p>Security Score</p>
-                  <strong>A+</strong>
-                </div>
-              </div>
-              <div className="float-card fc-right">
-                <div className="float-card-icon">
-                  <TestTube size={18} />
-                </div>
-                <div>
-                  <p>Test Coverage</p>
-                  <strong>94%</strong>
+                <div className="terminal-body">
+                  <div className="terminal-line dim">
+                    <span className="terminal-prompt">$</span> npx swiftly audit ./my-app
+                  </div>
+                  <div className="terminal-line">
+                    <span className="terminal-muted">Scanning codebase...</span>
+                  </div>
+                  <div className="terminal-spacer"></div>
+                  <div className="terminal-line">
+                    <span className="terminal-label-bad">BEFORE</span>
+                  </div>
+                  <div className="terminal-line dim">
+                    <span className="terminal-red">✗</span> No authentication
+                  </div>
+                  <div className="terminal-line dim">
+                    <span className="terminal-red">✗</span> 0 tests
+                  </div>
+                  <div className="terminal-line dim">
+                    <span className="terminal-red">✗</span> No error handling
+                  </div>
+                  <div className="terminal-line dim">
+                    <span className="terminal-red">✗</span> Hardcoded secrets
+                  </div>
+                  <div className="terminal-line dim">
+                    <span className="terminal-yellow">!</span> No CI/CD pipeline
+                  </div>
+                  <div className="terminal-spacer"></div>
+                  <div className="terminal-line">
+                    <span className="terminal-label-good">AFTER SWIFTLY</span>
+                  </div>
+                  <div className="terminal-line">
+                    <span className="terminal-green">✓</span> Auth + RBAC configured
+                  </div>
+                  <div className="terminal-line">
+                    <span className="terminal-green">✓</span> 94% test coverage
+                  </div>
+                  <div className="terminal-line">
+                    <span className="terminal-green">✓</span> Error boundaries + logging
+                  </div>
+                  <div className="terminal-line">
+                    <span className="terminal-green">✓</span> Secrets in env vault
+                  </div>
+                  <div className="terminal-line">
+                    <span className="terminal-green">✓</span> CI/CD + auto-deploy
+                  </div>
+                  <div className="terminal-spacer"></div>
+                  <div className="terminal-line">
+                    <span className="terminal-green-bold">Ready to ship.</span> <span className="terminal-muted">6 weeks, $14,900</span>
+                  </div>
                 </div>
               </div>
             </div>

@@ -217,7 +217,69 @@ nav.scrolled {
 .hero-stat span { font-size: 12px; color: var(--muted); }
 .h-divider { width: 1px; height: 40px; background: var(--border2); }
 
-/* App mockup */
+/* Terminal mockup */
+.terminal-wrap { position: relative; }
+.terminal {
+  background: #0a0a0a;
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', 'JetBrains Mono', monospace;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: rgba(255,255,255,.03);
+  border-bottom: 1px solid var(--border);
+}
+.terminal-dots { display: flex; gap: 6px; }
+.dot { width: 10px; height: 10px; border-radius: 50%; }
+.dot-red { background: #ff5f57; }
+.dot-yellow { background: #febc2e; }
+.dot-green { background: #28c840; }
+.terminal-title { font-size: 11px; color: var(--muted); letter-spacing: .05em; }
+.terminal-body { padding: 16px 20px; }
+.terminal-line { padding: 1px 0; }
+.terminal-line.dim { opacity: .6; }
+.terminal-spacer { height: 10px; }
+.terminal-prompt { color: var(--orange); margin-right: 8px; }
+.terminal-muted { color: var(--muted); }
+.terminal-red { color: #ff5f57; margin-right: 6px; }
+.terminal-yellow { color: #febc2e; margin-right: 6px; }
+.terminal-green { color: #28c840; margin-right: 6px; }
+.terminal-green-bold { color: #28c840; font-weight: 600; }
+.terminal-label-bad {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #ff5f57;
+  background: rgba(255,95,87,.1);
+  border: 1px solid rgba(255,95,87,.2);
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.terminal-label-good {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #28c840;
+  background: rgba(40,200,64,.1);
+  border: 1px solid rgba(40,200,64,.2);
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+/* App mockup (legacy) */
 .app-mockup-wrap { position: relative; }
 .app-mockup {
   background: rgba(255,255,255,.04);
