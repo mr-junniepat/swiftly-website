@@ -28,23 +28,31 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default:
-      "Swiftly — AI-Powered Mobile App Development for SMBs. Live in 6 Weeks.",
+      "Swiftly — We Fix Vibe-Coded Apps. Mobile, Web & Desktop. Live in 6 Weeks.",
     template: "%s | Swiftly",
   },
   description:
-    "Swiftly is an AI-native mobile app agency that builds iOS and Android apps for growing businesses — live in 6 weeks, guaranteed. Fixed pricing from $8,500.",
+    "Swiftly fixes vibe-coded apps and builds production-ready mobile, web, and desktop software for growing businesses. From AI prototype to MVP in 6 weeks, guaranteed. Fixed pricing from $8,500.",
   keywords: [
+    "fix vibe coded app",
+    "vibe coding to production",
+    "AI prototype to MVP",
     "mobile app development",
+    "web app development",
+    "desktop app development",
     "iOS app development",
     "Android app development",
-    "app development for small business",
-    "AI app agency",
-    "mobile app agency",
-    "fast app development",
-    "cross-platform app development",
+    "Next.js development",
     "React Native development",
     "Flutter development",
-    "SMB mobile apps",
+    "Electron app development",
+    "fix cursor code",
+    "fix bolt app",
+    "AI generated code cleanup",
+    "production ready code",
+    "app development for small business",
+    "AI app agency",
+    "fast app development",
     "affordable app development",
   ],
   authors: [{ name: "Swiftly" }],
@@ -67,24 +75,24 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: "Swiftly",
     title:
-      "Swiftly — AI-Powered Mobile App Development for SMBs. Live in 6 Weeks.",
+      "Swiftly — We Fix Vibe-Coded Apps. Mobile, Web & Desktop. Live in 6 Weeks.",
     description:
-      "We build iOS and Android apps for growing businesses — faster than any agency, without the enterprise price tag. Fixed pricing from $8,500. 6-week delivery guarantee.",
+      "We fix vibe-coded apps and build production-ready mobile, web, and desktop software — faster than any agency. Fixed pricing from $8,500. 6-week delivery guarantee.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Swiftly — Mobile Apps for Growing Businesses",
+        alt: "Swiftly — Fix Vibe-Coded Apps. Mobile, Web & Desktop.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "Swiftly — AI-Powered Mobile App Development for SMBs. Live in 6 Weeks.",
+      "Swiftly — We Fix Vibe-Coded Apps. Mobile, Web & Desktop. Live in 6 Weeks.",
     description:
-      "We build iOS and Android apps for growing businesses — faster than any agency, without the enterprise price tag. 6-week delivery guarantee.",
+      "We fix vibe-coded apps and build production-ready mobile, web, and desktop software. From AI prototype to MVP in 6 weeks. Fixed pricing from $8,500.",
     images: ["/og-image.png"],
   },
   alternates: {
