@@ -28,6 +28,7 @@ import ContactModal from "./components/ContactModal";
 import FAQ from "./components/FAQ";
 import ROICalculator from "./components/ROICalculator";
 import ScrollReveal from "./components/ScrollReveal";
+import HeroMockup from "./components/HeroMockup";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -161,69 +162,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Code Terminal Mockup */}
-            <div className="terminal-wrap reveal">
-              <div className="terminal">
-                <div className="terminal-bar">
-                  <div className="terminal-dots">
-                    <span className="dot dot-red"></span>
-                    <span className="dot dot-yellow"></span>
-                    <span className="dot dot-green"></span>
-                  </div>
-                  <span className="terminal-title">swiftly audit</span>
-                </div>
-                <div className="terminal-body">
-                  <div className="terminal-line dim">
-                    <span className="terminal-prompt">$</span> npx swiftly audit ./my-app
-                  </div>
-                  <div className="terminal-line">
-                    <span className="terminal-muted">Scanning codebase...</span>
-                  </div>
-                  <div className="terminal-spacer"></div>
-                  <div className="terminal-line">
-                    <span className="terminal-label-bad">BEFORE</span>
-                  </div>
-                  <div className="terminal-line dim">
-                    <span className="terminal-red">✗</span> No authentication
-                  </div>
-                  <div className="terminal-line dim">
-                    <span className="terminal-red">✗</span> 0 tests
-                  </div>
-                  <div className="terminal-line dim">
-                    <span className="terminal-red">✗</span> No error handling
-                  </div>
-                  <div className="terminal-line dim">
-                    <span className="terminal-red">✗</span> Hardcoded secrets
-                  </div>
-                  <div className="terminal-line dim">
-                    <span className="terminal-yellow">!</span> No CI/CD pipeline
-                  </div>
-                  <div className="terminal-spacer"></div>
-                  <div className="terminal-line">
-                    <span className="terminal-label-good">AFTER SWIFTLY</span>
-                  </div>
-                  <div className="terminal-line">
-                    <span className="terminal-green">✓</span> Auth + RBAC configured
-                  </div>
-                  <div className="terminal-line">
-                    <span className="terminal-green">✓</span> 94% test coverage
-                  </div>
-                  <div className="terminal-line">
-                    <span className="terminal-green">✓</span> Error boundaries + logging
-                  </div>
-                  <div className="terminal-line">
-                    <span className="terminal-green">✓</span> Secrets in env vault
-                  </div>
-                  <div className="terminal-line">
-                    <span className="terminal-green">✓</span> CI/CD + auto-deploy
-                  </div>
-                  <div className="terminal-spacer"></div>
-                  <div className="terminal-line">
-                    <span className="terminal-green-bold">Ready to ship.</span> <span className="terminal-muted">6 weeks, $14,900</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <HeroMockup />
           </div>
         </div>
 

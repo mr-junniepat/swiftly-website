@@ -219,6 +219,38 @@ nav.scrolled {
 .hero-stat span { font-size: 12px; color: var(--muted); }
 .h-divider { width: 1px; height: 40px; background: var(--border2); }
 
+/* Hero mockup container */
+.hero-mockup-container { position: relative; min-height: 400px; }
+.terminal-phase {
+  transition: opacity .4s ease, transform .4s ease;
+}
+.terminal-phase.fade-out {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+.terminal-phase.hidden { display: none; }
+.editor-phase {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity .5s ease, transform .5s ease;
+  position: absolute;
+  top: 0; left: 0; right: 0;
+}
+.editor-phase.fade-in {
+  opacity: 1;
+  transform: none;
+  position: relative;
+}
+
+/* Cursor blink */
+.terminal-cursor { display: inline; }
+.cursor-blink {
+  animation: blink .6s step-end infinite;
+  color: var(--orange);
+  font-weight: 700;
+}
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
 /* Terminal mockup */
 .terminal-wrap { position: relative; }
 .terminal {
@@ -280,6 +312,60 @@ nav.scrolled {
   font-weight: 600;
   margin-bottom: 2px;
 }
+
+/* Code editor mockup */
+.editor-tabs { display: flex; gap: 0; margin-left: auto; }
+.editor-tab {
+  font-size: 11px;
+  color: var(--muted);
+  padding: 4px 12px;
+  border-bottom: 2px solid transparent;
+  cursor: default;
+}
+.editor-tab.active { color: var(--white); border-color: var(--orange); }
+.editor-body { padding: 12px 0 0 !important; }
+.code-line {
+  padding: 1px 20px 1px 0;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  line-height: 1.8;
+  min-height: 24px;
+}
+.code-line:hover { background: rgba(255,255,255,.03); }
+.line-num {
+  width: 36px;
+  text-align: right;
+  padding-right: 16px;
+  color: rgba(245,242,236,.15);
+  font-size: 11px;
+  flex-shrink: 0;
+  user-select: none;
+}
+.code-keyword { color: #c678dd; }
+.code-var { color: #e5c07b; }
+.code-fn { color: #61afef; }
+.code-string { color: #98c379; }
+.code-prop { color: #e06c75; }
+.editor-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+  margin-top: 8px;
+  border-top: 1px solid var(--border);
+  font-size: 11px;
+  color: var(--muted);
+}
+.status-left { display: flex; align-items: center; gap: 12px; }
+.status-badge {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 10px;
+}
+.status-badge.good { background: rgba(40,200,64,.1); color: #28c840; border: 1px solid rgba(40,200,64,.2); }
+.status-item { color: var(--muted); }
 
 /* App mockup (legacy) */
 .app-mockup-wrap { position: relative; }
