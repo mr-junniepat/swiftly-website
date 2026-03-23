@@ -21,11 +21,10 @@ export default function Navbar({ onOpenModal }: { onOpenModal: () => void }) {
         </a>
 
         <div className="nav-links">
-          <a href="#pain">Why Swiftly</a>
-          <a href="#vibe-fix">Fix Vibe Code</a>
-          <a href="#roi">ROI Calculator</a>
-          <a href="#process">Process</a>
+          <a href="#vibe-fix">Services</a>
+          <a href="#how-it-works">Process</a>
           <a href="#pricing">Pricing</a>
+          <a href="#roi">ROI</a>
           <a href="#faq">FAQ</a>
         </div>
 
