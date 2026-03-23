@@ -2,11 +2,113 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Script from "next/script";
 import Navbar from "./components/Navbar";
 import ContactModal from "./components/ContactModal";
 import FAQ from "./components/FAQ";
 import ROICalculator from "./components/ROICalculator";
 import ScrollReveal from "./components/ScrollReveal";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      name: "Swiftly",
+      url: "https://swiftly-website-snowy.vercel.app",
+      logo: "https://swiftly-website-snowy.vercel.app/logo.png",
+      description:
+        "AI-native mobile app development agency for growing businesses. iOS and Android apps live in 6 weeks, guaranteed.",
+      sameAs: [],
+    },
+    {
+      "@type": "WebSite",
+      name: "Swiftly",
+      url: "https://swiftly-website-snowy.vercel.app",
+    },
+    {
+      "@type": "Service",
+      name: "Mobile App Development",
+      provider: {
+        "@type": "Organization",
+        name: "Swiftly",
+      },
+      description:
+        "AI-powered iOS and Android app development for SMBs. Fixed pricing from $8,500. 6-week delivery guarantee.",
+      areaServed: "Worldwide",
+      offers: [
+        {
+          "@type": "Offer",
+          name: "Starter Plan",
+          price: "8500",
+          priceCurrency: "USD",
+          description: "One platform, up to 8 screens, 6-week delivery",
+        },
+        {
+          "@type": "Offer",
+          name: "Growth Plan",
+          price: "14900",
+          priceCurrency: "USD",
+          description:
+            "Both platforms, up to 15 screens, 6-week delivery, backend included",
+        },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "How can you really deliver in 6 weeks?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "We achieve this through a fixed process, pre-built component libraries, and a dedicated team on your project only. We don't start a project unless we have the bandwidth to complete it on schedule.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What if I need changes after launch?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Every plan includes post-launch support (30-90 days depending on tier). After that, we offer flexible maintenance plans — or you take the source code to any developer. You're never locked in.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do I need a technical background to work with you?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Not at all. Most clients are business owners, not developers. Our weekly demos are designed to be reviewed by non-technical stakeholders.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What happens on the free discovery call?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "A 30-minute conversation where we learn about your business and what you want the app to accomplish. By the end you'll have a clear scope, timeline, and whether we're the right fit — no pitch, no pressure.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How does the launch guarantee work?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "If your app isn't live within 6 weeks of the agreed kickoff — for reasons within our control — we continue working at no additional charge. Written into every contract, not just a verbal promise.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can you integrate with my existing tools?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes — we integrate with Salesforce, HubSpot, Stripe, QuickBooks, Xero, and custom APIs. Mention your tools in the discovery call and we'll scope it in.",
+          },
+        },
+      ],
+    },
+  ],
+};
 
 function StarSVG() {
   return (
@@ -18,7 +120,7 @@ function StarSVG() {
 
 function Stars() {
   return (
-    <div className="stars">
+    <div className="stars" role="img" aria-label="5 out of 5 stars">
       <StarSVG />
       <StarSVG />
       <StarSVG />
@@ -35,9 +137,15 @@ export default function Home() {
 
   return (
     <>
+      <Script
+        id="json-ld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <ScrollReveal />
       <Navbar onOpenModal={openModal} />
 
+      <main>
       {/* HERO */}
       <section className="hero">
         <div className="hero-grid"></div>
@@ -711,6 +819,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      </main>
 
       {/* FOOTER */}
       <footer>

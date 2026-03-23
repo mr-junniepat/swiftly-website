@@ -33,8 +33,8 @@ export default function ContactModal({
       ref={overlayRef}
       onClick={handleBackdropClick}
     >
-      <div className="modal">
-        <button className="modal-close" onClick={onClose}>
+      <div className="modal" role="dialog" aria-modal="true" aria-label="Book a strategy call">
+        <button className="modal-close" onClick={onClose} aria-label="Close modal">
           &times;
         </button>
         <h3>Book Your Strategy Call</h3>
