@@ -475,6 +475,33 @@ nav.scrolled {
 .pricing-btn.primary { background: var(--orange); color: #fff; }
 .pricing-btn.primary:hover { background: var(--orange-dark); }
 
+/* Pricing extras */
+.pricing-context {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 2.5rem;
+  line-height: 1.65;
+}
+.pricing-context strong { color: var(--white); }
+.pricing-compare {
+  background: var(--bg3);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+.pricing-compare strong { color: var(--white); }
+.pricing-compare.featured {
+  background: var(--orange-soft);
+  border: 1px solid var(--orange-mid);
+}
+.pricing-compare.featured strong { color: var(--orange); }
+
 /* ── FAQ ACCORDION ── */
 .faq-list { border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; margin-top: 3rem; }
 .faq-item { border-bottom: 1px solid var(--border); }
