@@ -1,7 +1,3 @@
-"use client";
-
-import { useState } from "react";
-import Image from "next/image";
 import Script from "next/script";
 import {
   Smartphone,
@@ -22,11 +18,12 @@ import {
   ArrowRight,
 } from "lucide-react";
 import Navbar from "./components/Navbar";
-import ContactModal from "./components/ContactModal";
 import FAQ from "./components/FAQ";
 import ROICalculator from "./components/ROICalculator";
 import ScrollReveal from "./components/ScrollReveal";
 import HeroMockup from "./components/HeroMockup";
+
+const BOOKING_URL = "https://tidycal.com/feranmiicm";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -88,10 +85,6 @@ function Stars() {
 }
 
 export default function Home() {
-  const [modalOpen, setModalOpen] = useState(false);
-  const openModal = () => setModalOpen(true);
-  const closeModal = () => setModalOpen(false);
-
   return (
     <>
       <Script
@@ -100,7 +93,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <ScrollReveal />
-      <Navbar onOpenModal={openModal} />
+      <Navbar bookingUrl={BOOKING_URL} />
 
       <main>
 
@@ -134,9 +127,9 @@ export default function Home() {
               </p>
 
               <div className="hero-actions">
-                <button className="btn-primary" onClick={openModal}>
+                <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-primary">
                   Book a Free Call <ArrowRight size={16} />
-                </button>
+                </a>
                 <a href="#how-it-works" className="btn-ghost">
                   How It Works
                 </a>
@@ -422,7 +415,7 @@ export default function Home() {
                 <li><span style={{ color: "var(--muted)" }}>–</span> Backend / admin panel</li>
               </ul>
               <div className="pricing-compare">Agencies charge <strong>$20k–$50k</strong> for this</div>
-              <button className="pricing-btn outline" onClick={openModal}>Get Started</button>
+              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="pricing-btn outline">Get Started</a>
             </div>
 
             {/* Growth */}
@@ -441,7 +434,7 @@ export default function Home() {
                 <li className="yes"><span className="chk">✓</span> Backend + admin panel</li>
               </ul>
               <div className="pricing-compare featured">Agencies charge <strong>$50k–$120k</strong> for this</div>
-              <button className="pricing-btn primary" onClick={openModal}>Book Discovery Call</button>
+              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="pricing-btn primary">Book Discovery Call</a>
             </div>
 
             {/* Scale */}
@@ -459,7 +452,7 @@ export default function Home() {
                 <li className="yes"><span className="chk">✓</span> Ongoing maintenance plan</li>
               </ul>
               <div className="pricing-compare">Agencies charge <strong>$75k–$300k+</strong> for this</div>
-              <button className="pricing-btn outline" onClick={openModal}>Contact Sales</button>
+              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="pricing-btn outline">Contact Sales</a>
             </div>
           </div>
         </div>
@@ -473,7 +466,7 @@ export default function Home() {
             <h2>Run the numbers<br />yourself.</h2>
             <p>Most of our clients make their money back in the first month.</p>
           </div>
-          <ROICalculator onOpenModal={openModal} />
+          <ROICalculator bookingUrl={BOOKING_URL} />
         </div>
       </section>
 
@@ -498,9 +491,9 @@ export default function Home() {
               <em>out the door.</em>
             </h2>
             <div className="cta-right">
-              <button className="btn-primary" onClick={openModal}>
+              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-primary">
                 Book Your Free 30-Min Call <ArrowRight size={16} />
-              </button>
+              </a>
               <span className="cta-note">
                 No commitment. No sales pitch. Just a conversation.
               </span>
@@ -513,24 +506,41 @@ export default function Home() {
 
       <footer>
         <div className="container">
-          <div className="footer-inner">
-            <a href="#" className="footer-logo">
-              <Image src="/logo.png" alt="Swiftly" width={30} height={30} />
-              Swift<span>ly</span>
-            </a>
+          <div className="footer-top">
+            <div className="footer-brand">
+              <a href="#" className="footer-logo">
+                Swift<span>ly</span>
+              </a>
+              <p className="footer-tagline">
+                We turn your vision into a polished mobile app &mdash;
+                designed, built, and launched in record time.
+              </p>
+            </div>
             <div className="footer-links">
               <a href="#vibe-fix">Services</a>
               <a href="#how-it-works">Process</a>
               <a href="#pricing">Pricing</a>
+              <a href="#roi">ROI</a>
               <a href="#faq">FAQ</a>
-              <a href="#book">Contact</a>
             </div>
-            <span className="footer-copy">&copy; 2025 Swiftly. All rights reserved.</span>
+            <div className="footer-social">
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div className="footer-bottom">
+            <span className="footer-copy">&copy; 2026 Swiftly Build Inc. All rights reserved.</span>
           </div>
         </div>
       </footer>
 
-      <ContactModal isOpen={modalOpen} onClose={closeModal} />
     </>
   );
 }

@@ -141,9 +141,10 @@ nav {
   transition: background .3s, border-color .3s;
 }
 nav.scrolled {
-  background: rgba(7,7,7,.93);
+  background: rgba(30,30,35,.95);
   backdrop-filter: blur(14px);
-  border-color: var(--border);
+  border-color: rgba(255,255,255,.1);
+  box-shadow: 0 2px 20px rgba(0,0,0,.3);
 }
 .nav-logo {
   display: flex;
@@ -576,14 +577,19 @@ nav.scrolled {
 .cta-note { font-size: 13px; color: var(--muted); }
 
 /* ── FOOTER ── */
-footer { padding: 3rem 0; border-top: 1px solid var(--border); }
-.footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
-.footer-logo { font-family: var(--font-display); font-weight: 800; font-size: 18px; letter-spacing: -.02em; color: var(--white); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+footer { padding: 4rem 0 0; }
+.footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; padding-bottom: 3rem; }
+.footer-brand { max-width: 380px; }
+.footer-logo { font-family: var(--font-display); font-weight: 800; font-size: 22px; letter-spacing: -.02em; color: var(--white); text-decoration: none; text-transform: uppercase; }
 .footer-logo span { color: var(--orange); }
-.footer-logo img { height: 30px; width: 30px; border-radius: 50%; object-fit: cover; }
-.footer-links { display: flex; gap: 2rem; flex-wrap: wrap; }
-.footer-links a { font-size: 13px; color: var(--muted); text-decoration: none; transition: color .2s; }
+.footer-tagline { font-size: 14px; color: var(--muted); line-height: 1.6; margin-top: .75rem; }
+.footer-links { display: flex; gap: 2.5rem; flex-wrap: wrap; padding-top: .25rem; }
+.footer-links a { font-size: 15px; color: var(--muted); text-decoration: none; transition: color .2s; }
 .footer-links a:hover { color: var(--white); }
+.footer-social { display: flex; gap: 1rem; padding-top: .25rem; }
+.footer-social a { color: var(--muted); transition: color .2s; }
+.footer-social a:hover { color: var(--white); }
+.footer-bottom { border-top: 1px solid var(--border); padding: 1.5rem 0; text-align: center; }
 .footer-copy { font-size: 13px; color: var(--faint); }
 
 /* ── CONTACT MODAL ── */
@@ -617,7 +623,7 @@ footer { padding: 3rem 0; border-top: 1px solid var(--border); }
   .pain-grid     { grid-template-columns: 1fr; }
   .cta-inner     { flex-direction: column; text-align: center; align-items: center; }
   .cta-right     { align-items: center; }
-  .footer-inner  { flex-direction: column; align-items: flex-start; }
+  .footer-top { flex-direction: column; align-items: flex-start; }
   .editor-tabs   { display: none; }
 }
 

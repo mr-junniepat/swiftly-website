@@ -11,9 +11,9 @@ function formatCompact(n: number): string {
 }
 
 export default function ROICalculator({
-  onOpenModal,
+  bookingUrl,
 }: {
-  onOpenModal: () => void;
+  bookingUrl: string;
 }) {
   const [users, setUsers] = useState(500);
   const [arpu, setArpu] = useState(120);
@@ -132,7 +132,10 @@ export default function ROICalculator({
           <span>Swiftly Growth Plan investment</span>
           <strong>{breakevenLabel}</strong>
         </div>
-        <button
+        <a
+          href={bookingUrl}
+          target="_blank"
+          rel="noopener noreferrer"
           className="btn-primary"
           style={{
             width: "100%",
@@ -141,10 +144,9 @@ export default function ROICalculator({
             padding: "16px",
             fontSize: "16px",
           }}
-          onClick={onOpenModal}
         >
           Get My Custom Implementation Plan &rarr;
-        </button>
+        </a>
         <p
           style={{
             textAlign: "center",

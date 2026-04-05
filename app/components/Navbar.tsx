@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-export default function Navbar({ onOpenModal }: { onOpenModal: () => void }) {
+export default function Navbar({ bookingUrl }: { bookingUrl: string }) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -29,9 +29,9 @@ export default function Navbar({ onOpenModal }: { onOpenModal: () => void }) {
         </div>
 
         <div className="nav-cta">
-          <button className="btn-primary" onClick={onOpenModal}>
+          <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">
             Book Free Call &rarr;
-          </button>
+          </a>
         </div>
       </nav>
     </header>
