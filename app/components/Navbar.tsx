@@ -16,7 +16,7 @@ export default function Navbar({ bookingUrl }: { bookingUrl: string }) {
     <header>
       <nav id="nav" className={scrolled ? "scrolled" : ""} aria-label="Main navigation">
         <a href="#" className="nav-logo" aria-label="Swiftly — Home">
-          <Image src="/swiftly.png" alt="Swiftly logo" width={120} height={40} />
+          <Image src="/switfly-hor.png" alt="Swiftly logo" width={150} height={30} />
         </a>
 
         <div className="nav-links">
