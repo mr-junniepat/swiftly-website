@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Script from "next/script";
 import {
   Smartphone,
@@ -32,7 +33,7 @@ const jsonLd = {
       "@type": "Organization",
       name: "Swiftly",
       url: "https://swiftly-website-snowy.vercel.app",
-      logo: "https://swiftly-website-snowy.vercel.app/logo.png",
+      logo: "https://swiftly-website-snowy.vercel.app/swiftly.png",
       description:
         "AI-native app development agency. We fix vibe-coded apps and build production-ready mobile, web, and desktop software. Live in 6 weeks, guaranteed.",
       sameAs: [],
@@ -106,7 +107,7 @@ export default function Home() {
           <div className="hero-layout">
             <div>
               <div className="hero-eyebrow">
-                <div className="hero-eyebrow-line"></div>
+               
                 <span>We fix vibe-coded apps</span>
               </div>
 
@@ -509,7 +510,7 @@ export default function Home() {
           <div className="footer-top">
             <div className="footer-brand">
               <a href="#" className="footer-logo">
-                Swift<span>ly</span>
+                <Image src="/swiftly.png" alt="Swiftly" width={120} height={40} />
               </a>
               <p className="footer-tagline">
                 We turn your vision into a polished mobile app &mdash;
@@ -524,7 +525,7 @@ export default function Home() {
               <a href="#faq">FAQ</a>
             </div>
             <div className="footer-social">
-              <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+              <a href="https://x.com/SwiftlyShip_" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
               </a>
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
