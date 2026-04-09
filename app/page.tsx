@@ -106,7 +106,6 @@ export default function Home() {
         <div className="container hero-content">
           <div className="hero-layout">
             <div>
-              <Image src="/switfly-hor.png" alt="" width={140} height={40} className="hero-swoosh" />
               <div className="hero-eyebrow">
                 <span>We fix vibe-coded apps</span>
               </div>
